@@ -1,4 +1,4 @@
-# Smartsheet to Planner
+# SmartSheet to Planner
 
 ## Use case
 
