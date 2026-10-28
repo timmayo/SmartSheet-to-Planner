@@ -4,6 +4,14 @@
 
 A Power Automate flow reads a Smartsheet sheet and rebuilds it in Microsoft Planner, so a team that tracks work in Smartsheet can move to Planner without re-entering tasks by hand. It runs in GCC and is designed for repeated runs: rows already exported are updated, not duplicated.
 
+We use a Power Automate flow to this SmartSheet:
+
+![SmartSheet](images/SmartSheet.png)
+
+And save the tasks to a Planner board, grouped by bucket:
+
+![Planner board after a run](images/planner.png)
+
 Each run does three things:
 
 - Saves a CSV copy of the sheet to SharePoint.
@@ -28,7 +36,3 @@ A successful run produces four things.
 2. **Planner buckets** matching the distinct values in the sheet's Bucket column. Missing buckets are created; existing ones are reused (matched case-insensitively).
 3. **Planner tasks**, one per sheet row, placed in the bucket named on that row.
 4. **A SharePoint mapping list** with one item per created task, linking the sheet row key to the Planner task ID. On the next run, a row found in this list updates its task instead of creating a new one.
-
-The resulting Planner board, grouped by bucket:
-
-![Planner board after a run](images/planner.png)
