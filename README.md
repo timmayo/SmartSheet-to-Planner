@@ -1,8 +1,8 @@
-# Smartsheet to Planner Export Flow: Use Case and Output
+# Smartsheet to Planner
 
 ## Use case
 
-A Power Automate flow ("SmartSheet export") reads a Smartsheet sheet and rebuilds it in Microsoft Planner, so a team that tracks work in Smartsheet can move to Planner without re-entering tasks by hand. It runs in GCC (moderate) and is designed for repeated runs: rows already exported are updated, not duplicated.
+A Power Automate flow reads a Smartsheet sheet and rebuilds it in Microsoft Planner, so a team that tracks work in Smartsheet can move to Planner without re-entering tasks by hand. It runs in GCC and is designed for repeated runs: rows already exported are updated, not duplicated.
 
 Each run does three things:
 
@@ -18,7 +18,7 @@ You keep your task list in a Smartsheet sheet with columns for task name, bucket
 
 - Power Automate with the Smartsheet, Planner and SharePoint connectors (built and tested in GCC)
 - A Smartsheet sheet with the columns described in "How it works"
-- A Planner plan and a SharePoint site and list for the row-to-task mapping
+- A Planner plan (basic & group-connected) and a SharePoint site and list for the row-to-task mapping
 
 ## Expected output
 
@@ -31,4 +31,4 @@ A successful run produces four things.
 
 The resulting Planner board, grouped by bucket:
 
-![Planner board after a run](planner-board.png)
+![Planner board after a run](images/planner.png)
