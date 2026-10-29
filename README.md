@@ -4,7 +4,7 @@
 
 A Power Automate flow reads a Smartsheet sheet and rebuilds it in Microsoft Planner, so a team that tracks work in Smartsheet can move to Planner without re-entering tasks by hand. It runs in GCC and is designed for repeated runs: rows already exported are updated, not duplicated.
 
-We use a Power Automate flow to this SmartSheet:
+We use a Power Automate flow to export this SmartSheet:
 
 ![SmartSheet](images/SmartSheet.png)
 
